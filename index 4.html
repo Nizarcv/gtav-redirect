@@ -1,11 +1,85 @@
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://gta5formobile.edgeone.app/" />
-    <title>GTA V Mobile</title>
-  </head>
-  <body>
-    <p>Redirecting to GTA V Mobile...</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting to GTA V Mobile</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 0.2rem 0 1.5rem;
+    }
+    .countdown {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    button {
+      background-color: #ff3b3f;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(255,59,63,0.6);
+    }
+    button:hover {
+      background-color: #e63033;
+    }
+    button:active {
+      background-color: #b32a27;
+    }
+    .emoji {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Redirecting to GTA V Mobile...</h1>
+  <p>You will be redirected in <span class="countdown">5</span> seconds.</p>
+  <button onclick="redirectNow()" aria-label="Go to GTA V Mobile">
+    🚀 Go Now
+  </button>
+
+  <script>
+    let countdownElement = document.querySelector('.countdown');
+    let timeLeft = 5;
+
+    function redirectNow() {
+      window.location.href = "https://gta5formobile.edgeone.app/";
+    }
+
+    let timer = setInterval(() => {
+      timeLeft--;
+      countdownElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        redirectNow();
+      }
+    }, 1000);
+  </script>
+</body>
 </html>
